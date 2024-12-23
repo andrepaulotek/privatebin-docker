@@ -2,8 +2,8 @@ FROM alpine:3.21
 
 ARG ALPINE_PACKAGES="php83-iconv php83-pdo_mysql php83-pdo_pgsql php83-openssl php83-simplexml"
 ARG COMPOSER_PACKAGES="aws/aws-sdk-php google/cloud-storage"
-ARG PBURL=https://github.com/PrivateBin/PrivateBin/
-ARG RELEASE=1.7.5
+ARG PBURL=https://github.com/andrepaulotek/privatebin-code
+ARG RELEASE=1.7.5-modified
 ARG UID=65534
 ARG GID=82
 
@@ -12,8 +12,8 @@ ENV PATH=$PATH:/srv/bin
 
 LABEL org.opencontainers.image.authors=support@privatebin.org \
       org.opencontainers.image.vendor=PrivateBin \
-      org.opencontainers.image.documentation=https://github.com/PrivateBin/docker-nginx-fpm-alpine/blob/master/README.md \
-      org.opencontainers.image.source=https://github.com/PrivateBin/docker-nginx-fpm-alpine \
+      org.opencontainers.image.documentation=https://github.com/andrepaulotek/privatebin-docker/blob/master/README.md \
+      org.opencontainers.image.source=https://github.com/andrepaulotek/privatebin-docker \
       org.opencontainers.image.licenses=zlib-acknowledgement \
       org.opencontainers.image.version=${RELEASE}
 
