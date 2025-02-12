@@ -3,7 +3,7 @@ FROM alpine:3.21
 ARG ALPINE_PACKAGES="php83-iconv php83-pdo_mysql php83-pdo_pgsql php83-openssl php83-simplexml"
 ARG COMPOSER_PACKAGES="aws/aws-sdk-php google/cloud-storage"
 ARG PBURL=https://github.com/andrepaulotek/privatebin-code
-ARG RELEASE=1.7.5-modified
+ARG RELEASE=1.7.6-modified
 ARG UID=65534
 ARG GID=82
 
