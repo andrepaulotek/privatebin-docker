@@ -18,7 +18,7 @@ jobs:
   snyk:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v5
     - name: Build a Docker image
       run: docker build -t privatebin/nginx-fpm-alpine .
     - name: Run Snyk to check Docker image for vulnerabilities
@@ -35,6 +35,6 @@ jobs:
         image: privatebin/nginx-fpm-alpine
         args: --file=Dockerfile
     - name: Upload result to GitHub Code Scanning
-      uses: github/codeql-action/upload-sarif@v3
+      uses: github/codeql-action/upload-sarif@v4
       with:
         sarif_file: snyk.sarif
